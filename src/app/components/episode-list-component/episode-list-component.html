@@ -1,0 +1,11 @@
+<h1>Personajes</h1>
+
+<div class="row gx-2 gy-4">
+    @for(char of characterList(); track char.id) {
+    <div class="col-md-3">
+       
+        <app-episode-item-component [character]="char"
+            (characterClicked)="openCharacterModal($event)"></app-episode-item-component>
+    </div>
+    }
+</div>

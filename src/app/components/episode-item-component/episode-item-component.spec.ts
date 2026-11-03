@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { EpisodeItemComponent } from './episode-item-component';
+
+describe('EpisodeItemComponent', () => {
+  let component: EpisodeItemComponent;
+  let fixture: ComponentFixture<EpisodeItemComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [EpisodeItemComponent],
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(EpisodeItemComponent);
+    component = fixture.componentInstance;
+    await fixture.whenStable();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

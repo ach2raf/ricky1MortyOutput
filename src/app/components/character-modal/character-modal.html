@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body text-center">
+    <img [src]="characterDetail?.image" class="img-fluid rounded" [alt]="characterDetail?.name">
+    <h5 class="mt-3">{{ characterDetail?.name }}</h5>
+    <span
+        class="badge"
+        [class.text-bg-success]="characterDetail?.status === 'Alive'"
+        [class.text-bg-danger]="characterDetail?.status === 'Dead'"
+        [class.text-bg-secondary]="characterDetail?.status === 'unknown'"
+    >
+        {{ characterDetail?.status }}
+    </span>
+    <p class="mt-2 mb-1">Species: {{ characterDetail?.species }}</p>
+    <p class="mb-0">Origin: {{ characterDetail?.origin?.name }}</p>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="activeModal.close()">Close</button>
+</div>
